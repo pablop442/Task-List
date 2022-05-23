@@ -1,14 +1,20 @@
-import React, { useState } from "react";
+import React from "react";
 import Proptypes from "prop-types";
-import { BsFillTrashFill } from "react-icons/bs";
+import { BsFillTrashFill, BsFillExclamationCircleFill, BsFillCheckCircleFill } from "react-icons/bs";
 
 const Item = props => {
 	return (
 		<>
-			<li key={props.key} className="list-element">
+			<li className={props.className}>
 				{props.todo}
 				<button className="close-btn" onClick={props.removeTodo}>
 					<BsFillTrashFill />
+				</button>
+				<button className="close-btn" onClick={props.importantTodo}>
+					<BsFillExclamationCircleFill />
+				</button>
+				<button className="close-btn" onClick={props.completedTodo}>
+					<BsFillCheckCircleFill />
 				</button>
 			</li>
 		</>
@@ -16,9 +22,12 @@ const Item = props => {
 };
 
 Item.propTypes = {
-	key: Proptypes.number,
+
 	todo: Proptypes.string,
-	removeTodo: Proptypes.func
+	removeTodo: Proptypes.func,
+	importantTodo: Proptypes.func,
+	className: Proptypes.string,
+	completedTodo: Proptypes.func,
 };
 
 export default Item;

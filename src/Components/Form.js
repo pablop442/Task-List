@@ -8,9 +8,7 @@ const Form = props => {
 	};
 	return (
 		<>
-			<div className="title">
-				<h1>ToDo List</h1>
-			</div>
+			
 			<form className="todo-form" onSubmit={handleSubmit}>
 				<input
 					className="todo-input"
@@ -24,6 +22,17 @@ const Form = props => {
 				<button className="delete-button" onClick={props.deleteTodo}>
 					Delete All
 				</button>
+				<select name="filter" onChange={props.onChange}>
+					<option value="all">
+						All
+					</option>
+					<option value="important">
+						Important
+					</option>
+					<option value="completed">
+						Completed
+					</option>
+				</select>
 			</form>
 		</>
 	);
@@ -33,7 +42,8 @@ Form.propTypes = {
 	input: Proptypes.string,
 	inputTextChanger: Proptypes.func,
 	addTodo: Proptypes.func,
-	deleteTodo: Proptypes.func
+	deleteTodo: Proptypes.func,
+	onChange: Proptypes.func,
 };
 
 export default Form;
