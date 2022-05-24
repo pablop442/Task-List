@@ -10,14 +10,20 @@ const ToDoList = () => {
   const [filteredTodos, setFilteredTodos] = useState([]);
 
   // UseEffect
+
+ 
+  useEffect(() => {
+    getList();
+  }, []);
+
+ 
+  
   useEffect(() => {
     filterHandler();
     saveList();
   }, [todos, status]);
 
-  useEffect(() => {
-    getList();
-  }, []);
+  
 
   //Save and get data to local storage
 
@@ -30,7 +36,12 @@ const ToDoList = () => {
       localStorage.setItem("todos", JSON.stringify([]));
     } else {
       let allTodos = JSON.parse(localStorage.getItem("todos"));
+        if(allTodos.length === 0){
+          return null
+        }
       setTodo(allTodos);
+      console.log(allTodos)
+      
     }
   };
 
