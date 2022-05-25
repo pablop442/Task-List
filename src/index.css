@@ -1,5 +1,152 @@
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gloria Hallelujah", cursive;
+}
+body {
+  background: #cac531; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #f3f9a7,
+    #cac531
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #f3f9a7,
+    #cac531
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
 
+.title {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.todo-form {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.todo-input {
+  width: 400px;
+  height: 40px;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.todo-filter {
+  margin-right: 10px;
+}
+
+.icon-style {
+  font-size: 25px;
+}
+
+.list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.list-element {
+  margin: 0.8rem;
+  background: white;
+  font-size: 1.5 rem;
+  color: black;
+  list-style: none;
+  padding: 10px;
+  border: solid #cac531;
+  border-width: 2px;
+  border-radius: 7px;
+}
+
+.btn-success {
+  box-shadow: inset 0px 1px 0px 0px #cac531;
+  background: linear-gradient(to bottom, #cac531 5%, #3e5641 100%);
+  background-color: #3e5641;
+  border: 1px solid #cac531;
+  cursor: pointer;
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #3e5641;
+}
+
+.btn-danger {
+  box-shadow: inset 0px 1px 0px 0px #d36135;
+  background: linear-gradient(to bottom, #d36135 5%, #a24936 100%);
+  background-color: #a24936;
+  border: 1px solid #d36135;
+  cursor: pointer;
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #a24936;
+}
+
+.close-btn {
+  border: none;
+  padding: 0, 5rem;
+  cursor: pointer;
+  margin-left: 0, 5rem;
+  background: none;
+  float: right;
+  color: #a24936;
+}
+
+.done-btn {
+  border: none;
+  padding: 0, 5rem;
+  cursor: pointer;
+  margin-left: 0, 5rem;
+  background: none;
+  float: right;
+  color: #3e5641;
+}
+
+.important-btn {
+  border: none;
+  padding: 0, 5rem;
+  cursor: pointer;
+  color: #d36135;
+  background: none;
+}
+
+.highlight-element {
+  margin: 0.8rem;
+  background: #f3f9a7;
+  font-size: 1.5 rem;
+  color: black;
+  list-style: none;
+  padding: 10px;
+  border: solid #d36135;
+  border-width: 2px;
+}
+
+.completed-element {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.form-control{
+  border: 1px solid #f3f9a7;
+}
+
+.form-control:focus{
+  border-color: #f3f9a7;
+  box-shadow: 0 0 0 0.10rem rgb(211 97 53 / 25%);
+}
+
+.form-select{
+  border: 1px solid #f3f9a7;
+}
+
+.form-select:focus{
+  border-color: #f3f9a7;
+  box-shadow: 0 0 0 0.10rem rgb(211 97 53 / 25%);
 }
 
