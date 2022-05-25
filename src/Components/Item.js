@@ -14,9 +14,9 @@ const Item = (props) => {
           <div className="col-sm-6 col-12">
             <li className={props.className}>
               <div className="row">
-                <div className="col-1">
+                <div className="col-1 me-2">
                   <button
-                    className="important-btn"
+                    className="important-btn "
                     title="Mark as Important"
                     onClick={props.importantTodo}
                   >
