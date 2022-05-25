@@ -128,7 +128,7 @@ const ToDoList = () => {
   return (
     <>
       <header className="title">
-        <h1>Basic To Do List</h1>
+        <h1>To Do List</h1>
       </header>
       <Form
         input={input}
@@ -137,7 +137,7 @@ const ToDoList = () => {
         deleteTodo={deleteTodo}
         onChange={statusChanger}
       />
-      <div className="list">
+      <div className="container">
         <ul>
           {filteredTodos.map((todo) => (
             <Item
